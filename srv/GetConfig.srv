@@ -1,0 +1,4 @@
+---
+bool success
+std_msgs/String config
+std_msgs/String error_message

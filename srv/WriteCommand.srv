@@ -1,0 +1,5 @@
+std_msgs/String command # dont forget to add "/r/n" at the end of the command
+---
+bool success
+std_msgs/String response
+std_msgs/String error_message 
