@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     serial_config:
-      port: "/dev/ttyUSB0" # current port name of the device
+      port: "/dev/ttyCLAP" # current port name of the device
       baudrate: 460800 # current baudrate of the device
 
     port1_config:
@@ -38,11 +38,12 @@
       align_velocity_threshold: 0.5 #(m/s) default 0.5 set the velocity threshold for INS alignment, in m/s.
       ins_initial_attitude: [0.0 0.0 0.0] # (degree)(pitch,roll,yaw) default [0.0 0.0 0.0] set the initial attitude of the INS device, in degrees.
       ins_initial_attitude_error: [0.0002778 0.0002778 0.0002778] # (degree)(pitch,roll,yaw) default [0.0002778 0.0002778 0.0002778] set the initial attitude error of the INS device, in degrees. [0.0002778, 45]
-      lever_arm_master: [0.0 0.0 0.0] # (m)(x,y,z)default [0.0 0.0 0.0] set the lever arm of the master antenna relative to the IMU, in meters.
-      lever_arm_slave:  [0.0 0.0 0.0] # (m)(x,y,z) default [0.0 0.0 0.0] set the lever arm of the slave antenna relative to the IMU, in meters.
-      lever_arm_master_error: [0.01 0.01 0.01] # (m)(x,y,z) default [0.01 0.01 0.01] set the lever arm error of the master antenna relative to the IMU, in meters.
-      lever_arm_slave_error: [0.01 0.01 0.01] # (m)(x,y,z) default [0.01 0.01 0.01] set the lever arm error of the slave antenna relative to the IMU, in meters.
-      imu_position_offset: [0.0 0.0 0.0] #(m)(x,y,z) default [0.0 0.0 0.0]set the position offsets of IMU, when INS osition and velocity are output
+      lever_arm_master: [1.66 -0.5 -0.03] # (m)(x,y,z)default [0.0 0.0 0.0] set the lever arm of the master antenna relative to the IMU, in meters.
+      lever_arm_slave:  [1.66 0.52 -0.03] # (m)(x,y,z) default [0.0 0.0 0.0] set the lever arm of the slave antenna relative to the IMU, in meters.
+      lever_arm_master_error: [0.03 0.03 0.02] # (m)(x,y,z) default [0.0 0.0 0.0] set the lever arm error of the master antenna relative to the IMU, in meters.
+      lever_arm_slave_error: [0.03 0.03 0.02] # (m)(x,y,z) default [0.0 0.0 0.0] set the lever arm error of the slave antenna relative to the IMU, in meters.
+      imu_position_offset: [-1.682 0.0 -1.904] #(m)(x,y,z) default [0.0 0.0 0.0]set the position offsets of IMU, when INS osition and velocity are output
+
 
     pps_config:
       enable: true # true (recommended) false-> disable pps
